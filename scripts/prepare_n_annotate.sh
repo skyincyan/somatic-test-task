@@ -7,8 +7,9 @@ set -o nounset
 
 PATIENT_DIR=$1
 REFERENCE=$2
+GIT_DIR=$3
 
-source tool_config.sh 
+source "$GIT_DIR"/tool_config.sh 
 
 python3.8 "$UTILITY_DIR"/clear_merge_n_filter.py "$PATIENT_DIR"
 

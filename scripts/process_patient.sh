@@ -11,8 +11,9 @@ REFERENCE_VCF=$3
 REGIONS=$4
 TUMOR=$5
 NORMAL=$6
+GIT_DIR=$7
 
-source tool_config.sh
+source "$GIT_DIR"/tool_config.sh
 
 # quick qc 
 

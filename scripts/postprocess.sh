@@ -7,8 +7,9 @@ set -o nounset
 
 PATIENT_DIR=$1
 PREPARATION=$2
+GIT_DIR=$3
 
-source tool_config.sh 
+source "$GIT_DIR"/tool_config.sh 
 
 # process pileups, get snp correlation and prepare pileups for facets
 python3.8 "$UTILITY_DIR"/pileups_process.py "$PATIENT_DIR"

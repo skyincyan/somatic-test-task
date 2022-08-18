@@ -1,6 +1,6 @@
 # Calling mutations 
 
-This code runs basic QC for tumor & normal bams, calls somatic mutations with strelks, filters and annotates with VEP, adds custom filters and gets segments for tumor samples and annotates mutations according to CNA status. 
+This code runs basic QC for tumor & normal bams, calls somatic mutations with strelka, filters and annotates with VEP, adds custom filters and gets segments for tumor samples and annotates mutations according to CNA status. 
 
 # Requirements
 
@@ -76,7 +76,7 @@ To prepare for running, enter tools locations in tool_config_template.sh and sav
 # Running 
 
 ```sh
-full_process.sh PATIENT_DIRECTORY REFERENCE.FASTA REFERENCE.VCF REGIONS.BED TUMOR.BAM NORMAL.BAM PREPARATION
+full_process.sh PATIENT_DIRECTORY REFERENCE.FASTA REFERENCE.VCF REGIONS.BED TUMOR.BAM NORMAL.BAM PREPARATION GIT_DIR
 ```
 PATIENT_DIRECTORY - link to patient directory, where all files will be created  
 REFERENCE.FASTA - link to reference sequence  
@@ -85,11 +85,12 @@ REGIONS.BED - link to sequencing regions bed file
 TUMOR.BAM - link to tumor bam  
 NORMAL.BAM - link to normal bam  
 PREPARATION - preparation type, FFPE for parafine, FF - for fresh/fresh frozen  
+GIT_DIR - this repo location
 
 Or can be run step by step   
 
 ```sh
-process_patient.sh PATIENT_DIRECTORY REFERENCE.FASTA REFERENCE.VCF REGIONS.BED TUMOR.BAM NORMAL.BAM  
-prepare_n_annotate.sh PATIENT_DIRECTORY REFERENCE.FASTA
-postprocess.sh PATIENT_DIRECTORY PREPARATION
+process_patient.sh PATIENT_DIRECTORY REFERENCE.FASTA REFERENCE.VCF REGIONS.BED TUMOR.BAM NORMAL.BAM GIT_DIR
+prepare_n_annotate.sh PATIENT_DIRECTORY REFERENCE.FASTA GIT_DIR
+postprocess.sh PATIENT_DIRECTORY PREPARATION GIT_DIR
 ```
