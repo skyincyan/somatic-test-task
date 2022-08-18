@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # tool directories config 
 
 FASTQC_DIR=

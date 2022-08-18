@@ -1,6 +1,6 @@
 # Calling mutations 
 
-This code runs basic QC for tumor/normal bams, calls somatic mutations, filters and annotates with VEP, adds custom filters and annotations to VCF. 
+This code runs basic QC for tumor & normal bams, calls somatic mutations with strelks, filters and annotates with VEP, adds custom filters and gets segments for tumor samples and annotates mutations according to CNA status. 
 
 # Requirements
 

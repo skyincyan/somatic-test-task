@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # All patient processing. See Readme.md for instruction
 
 set -o errexit
@@ -15,6 +15,6 @@ PREPARATION=$7
 
 # run everything 
 
-./process_patient.sh $PATIENT_DIR $REFERENCE $REFERENCE_VCF $REGIONS $TUMOR $NORMAL  
-./prepare_n_annotate.sh $PATIENT_DIR $REFERENCE
-./postprocess.sh $PATIENT_DIR $PREPARATION
+./process_patient.sh "$PATIENT_DIR" "$REFERENCE" "$REFERENCE_VCF" "$REGIONS" "$TUMOR" "$NORMAL"  
+./prepare_n_annotate.sh "$PATIENT_DIR" "$REFERENCE"
+./postprocess.sh "$PATIENT_DIR" "$PREPARATION"
